@@ -1,0 +1,69 @@
+<!doctype html >
+<html lang="pl">
+
+<head>
+	<title>Sklep </title>
+	<meta charset="UTF-8">
+	<script type="text/javascript">
+			
+		let sklep = new Map();
+		sklep.set ("chleb", 2.50);
+		sklep.set ("sok", 1.50); 	
+		sklep.set ("woda", 3.50); 	
+		
+		let koszyk =[];
+		
+		while(true){
+			
+			let produkt= prompt("Co chcesz kupić? (woda, sok, chleb)")	;
+			
+			if (produkt ==""){
+				break;
+			}
+			else if(produkt == "woda" || produkt == "sok" || produkt == "chleb"){
+				koszyk.push(produkt);	
+			}
+			else{
+				alert("Nie ma takiego produktu");
+			}
+		}	
+			document.write("<h1>Podsumowanie zakupów</h1>");
+			let suma=0;
+			
+			for (let towar of koszyk){
+				
+				document.write(towar +" - "+ sklep.get(towar));
+				document.write("</br>");
+				suma=sklep.get(towar)+suma;
+			
+			}	
+				document.write("<h2>Płacisz</h2>");
+				document.write("Suma do zapłaty: " + suma);
+			
+			
+				
+		
+		
+			
+					
+		
+	
+	</script>	
+		
+	
+	
+	</head>
+	
+<body></body>
+
+</html>
+	
+		
+	
+	
+	
+	
+	
+
+
+
